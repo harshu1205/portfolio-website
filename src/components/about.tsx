@@ -1,27 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Database, Globe, Smartphone } from "lucide-react"
+import { Brain, Database, Cloud, Code } from "lucide-react"
 
 export default function About() {
   const skills = [
     {
-      icon: <Code className="h-8 w-8" />,
-      title: "Frontend Development",
-      description: "React, Next.js, TypeScript, Tailwind CSS",
+      icon: <Brain className="h-8 w-8" />,
+      title: "Machine Learning & AI",
+      description: "XGBoost, CNNs, Computer Vision, Predictive Analytics",
     },
     {
       icon: <Database className="h-8 w-8" />,
-      title: "Backend Development",
-      description: "Node.js, Python, PostgreSQL, MongoDB",
+      title: "Enterprise Systems",
+      description: "Salesforce APIs, Snowflake, Redis, Vector Databases",
     },
     {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Web Technologies",
-      description: "REST APIs, GraphQL, AWS, Docker",
+      icon: <Cloud className="h-8 w-8" />,
+      title: "Serverless Architecture",
+      description: "LangChain, OpenAI APIs, Multi-agent Systems",
     },
     {
-      icon: <Smartphone className="h-8 w-8" />,
-      title: "Mobile Development",
-      description: "React Native, Flutter, Progressive Web Apps",
+      icon: <Code className="h-8 w-8" />,
+      title: "Full-Stack Development",
+      description: "Python, Node.js, React, ETL Pipelines",
     },
   ]
 
@@ -31,8 +31,8 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate developer with experience in building modern web applications
-            and solving complex technical challenges.
+            AI Software Engineer specializing in enterprise-scale machine learning systems
+            and intelligent automation solutions.
           </p>
         </div>
 
@@ -40,14 +40,14 @@ export default function About() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m a dedicated software engineer with a passion for creating innovative 
-              digital solutions. My journey in technology started with curiosity and 
-              has evolved into expertise across multiple programming languages and frameworks.
+              I&apos;m an AI Software Engineer at Mad Mobile, focused on building enterprise-scale 
+              machine learning systems that drive business value. My expertise spans predictive 
+              analytics, computer vision, and serverless AI architectures.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I believe in writing clean, maintainable code and staying up-to-date 
-              with the latest industry trends. My goal is to build applications that 
-              not only function flawlessly but also provide exceptional user experiences.
+              I specialize in developing high-accuracy ML models, intelligent automation platforms, 
+              and distributed systems that handle enterprise workloads. My approach combines technical 
+              excellence with business impact, delivering solutions that scale.
             </p>
           </div>
           

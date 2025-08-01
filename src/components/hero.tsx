@@ -12,12 +12,12 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Full-Stack Developer & Software Engineer
+            AI Software Engineer & Machine Learning Specialist
           </p>
           
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I create modern, scalable web applications and digital experiences. 
-            Passionate about clean code, innovative solutions, and bringing ideas to life.
+            Building intelligent systems with advanced ML architectures and enterprise-scale solutions. 
+            Specialized in predictive analytics, computer vision, and serverless AI platforms.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
