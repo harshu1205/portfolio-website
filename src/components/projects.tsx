@@ -394,7 +394,7 @@ export default function Projects() {
           <div className="absolute top-4 right-1/4 w-3 h-3 bg-blue-400 rounded-full animate-sparkle" style={{animationDelay: '1s'}}></div>
           <div className="absolute top-12 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-sparkle" style={{animationDelay: '2s'}}></div>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto neon-glow">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore my diverse portfolio spanning AI/ML, game development, research, web applications, 
             and automation. Each project showcases different technical skills and creative problem-solving.
           </p>
@@ -429,7 +429,7 @@ export default function Projects() {
               {featuredProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-500 cursor-pointer transform group relative animate-pulse-glow border-primary/20"
+                  className="overflow-hidden hover:shadow-lg hover:scale-[1.01] transition-all duration-300 cursor-pointer transform group relative border-primary/20"
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10">
@@ -543,7 +543,7 @@ export default function Projects() {
               {otherProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-500 cursor-pointer transform group relative border-primary/10 hover:border-primary/30"
+                  className="overflow-hidden hover:shadow-lg hover:scale-[1.01] transition-all duration-300 cursor-pointer transform group relative border-primary/10 hover:border-primary/30"
                   onClick={() => setSelectedProject(project)}
                 >
                   <CardHeader className="pb-3">

@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Download, Sparkles, Zap } from "lucide-react"
+import { ArrowRight, Download, Sparkles } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export default function Hero() {
@@ -46,30 +46,16 @@ export default function Hero() {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="space-y-6 page-transition loaded">
-          <div className="relative">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              Hi, I&apos;m{" "}
-              <span className="holographic animate-gradient-x relative">
-                Harsh
-                <div className="absolute -top-2 -right-2">
-                  <Zap className="w-6 h-6 text-yellow-400 animate-sparkle" />
-                </div>
-              </span>
-            </h1>
-            {/* Glitch overlay effect */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-red-500" style={{transform: 'translate(2px, 0)'}}>
-                Hi, I&apos;m{" "}
-                <span className="text-red-400">Harsh</span>
-              </h1>
-            </div>
-          </div>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            Hi, I&apos;m{" "}
+            <span className="holographic animate-gradient-x">Harsh</span>
+          </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto neon-glow">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
             AI Software Engineer & Machine Learning Specialist
           </p>
           
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-typing">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Building intelligent systems with advanced ML architectures and enterprise-scale solutions. 
             Specialized in predictive analytics, computer vision, and serverless AI platforms.
           </p>
@@ -88,7 +74,7 @@ export default function Hero() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="group border-primary/50 hover:border-primary hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 neon-glow"
+              className="group"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/resume.pdf';
@@ -96,7 +82,7 @@ export default function Hero() {
                 link.click();
               }}
             >
-              <Download className="mr-2 h-4 w-4 animate-bounce" />
+              <Download className="mr-2 h-4 w-4" />
               Download Resume
             </Button>
           </div>
