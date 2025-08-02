@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Brain, Database, Cloud, Code } from "lucide-react"
 
@@ -52,8 +54,21 @@ export default function About() {
           </div>
           
           <div className="relative">
-            <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
-              <div className="text-6xl font-bold text-primary/30">SA</div>
+            <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg overflow-hidden flex items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/photo_5030921246979763740_y.jpg" 
+                alt="Sriharshith Akula - Professional Headshot"
+                className="w-full h-full object-cover rounded-lg"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  if (nextElement) nextElement.style.display = 'flex';
+                }}
+              />
+              <div className="hidden w-full h-full items-center justify-center">
+                <div className="text-6xl font-bold text-primary/30">SA</div>
+              </div>
             </div>
           </div>
         </div>

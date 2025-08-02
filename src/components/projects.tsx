@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Slideshow } from "@/components/ui/slideshow"
 import { ExternalLink, Play } from "lucide-react"
 
 export default function Projects() {
@@ -28,14 +29,17 @@ export default function Projects() {
       longDescription: "My Candy Crush AI project represents a remarkable fusion of screen casting technology, machine learning, and neural network evolution, using NumPy as well as pytorch. Utilizing screen casting software, I projected my phone screen onto my laptop, enabling image retrieval and processing of Candy Crush game boards. Leveraging machine learning, specifically Support Vector Machines (SVM), I calculated all feasible board actions and inputted them into a genetically evolved neural network system. This system, employing neuroevolution, meticulously determined the optimal moves for each board state by peering four steps ahead.",
       technologies: ["Python", "NumPy", "PyTorch", "SVM", "Neural Networks"],
       category: "ai-ml",
-      mediaType: "image",
-      mediaUrl: "https://static.wixstatic.com/media/e71193_0ad263e6bf4e43b3bc7dec34dd3da63a~mv2.png",
-      backgroundImage: "https://static.wixstatic.com/media/e71193_d4266f00012b4d8889627033778c92db~mv2.jpg",
+      mediaType: "slideshow",
+      media: [
+        { type: "image" as const, src: "/images/CCAI2.png", alt: "Candy Crush AI Interface" },
+        { type: "image" as const, src: "/images/CCAI2_edited.jpg", alt: "Candy Crush AI Analysis" },
+        { type: "image" as const, src: "/images/CC_3.png", alt: "AI Board Analysis" },
+        { type: "image" as const, src: "/images/CC_4.png", alt: "Neural Network Training" }
+      ],
       rationale: "Motivated by my passion for competitive gaming and a burgeoning interest in artificial intelligence, I embarked on the challenging journey of creating a Candy Crush AI. Eager to expand my expertise in AI, I saw this project as an opportunity to delve deeper into neural networks and machine learning algorithms.",
       techImages: {
-        "Python": "https://static.wixstatic.com/media/e71193_78b1554fe86a4b5ca3709394efbb071f~mv2.png",
-        "NumPy": "https://static.wixstatic.com/media/e71193_38f29d86157548069cb919cf3e197522~mv2.png",
-        "PyTorch": "https://static.wixstatic.com/media/e71193_c17c9618420b43cc970e5c8dc81f88fd~mv2.png"
+        "Python": "/images/python-5-logo-png-transparent.png",
+        "PyTorch": "/images/1200px-PyTorch_logo_icon.svg.png"
       },
       featured: true
     },
@@ -46,8 +50,12 @@ export default function Projects() {
       longDescription: "Published research work on developing machine learning models for automated test set prediction, contributing to advances in ML validation methodologies and predictive analytics. This work demonstrates sophisticated understanding of machine learning validation techniques and statistical analysis.",
       technologies: ["Machine Learning", "Data Analysis", "Research", "Statistical Analysis"],
       category: "ai-ml",
-      mediaType: "image",
-      mediaUrl: "https://static.wixstatic.com/media/e71193_1e661c078e50421486f7b1426b792bbc~mv2.png",
+      mediaType: "slideshow",
+      media: [
+        { type: "image" as const, src: "/images/PUB_1.png", alt: "Research Publication Cover" },
+        { type: "image" as const, src: "/images/PUB_2.png", alt: "Publication Methodology" },
+        { type: "image" as const, src: "/images/PUB_3.png", alt: "Research Results" }
+      ],
       featured: true
     },
     {
@@ -73,12 +81,19 @@ export default function Projects() {
       longDescription: "Terehelt is an ambitious MMO RPG game developed in Roblox Studio using Lua, demonstrating advanced skills in database management, client/server interactions, pathfinding algorithms, and hitbox calculations. The project also showcases expertise in front-end design, custom 3D modeling with Blender, and original music composition. With over 5000 lines of code and almost a year of development, it highlights my proficiency in game development, programming, and creative design, and currently has over 1000 plays.",
       technologies: ["Lua", "Roblox Studio", "Blender", "Game Design"],
       category: "games",
-      mediaType: "link",
+      mediaType: "slideshow",
+      media: [
+        { type: "image" as const, src: "/images/Ter_1.png", alt: "Terehelt Game Interface" },
+        { type: "image" as const, src: "/images/Ter_2.png", alt: "Terehelt Gameplay" },
+        { type: "image" as const, src: "/images/Ter_3.png", alt: "Terehelt World Design" },
+        { type: "video" as const, src: "/images/52 - Tere_V1.mp4", alt: "Terehelt Gameplay Demo 1" },
+        { type: "video" as const, src: "/images/53 - Tere_V2.mp4", alt: "Terehelt Gameplay Demo 2" },
+        { type: "video" as const, src: "/images/54 - Tere_V3.mp4", alt: "Terehelt Gameplay Demo 3" }
+      ],
       demoUrl: "https://www.roblox.com/games/5120450169/Terehelt-Beta",
       rationale: "I have a particular place in my heart for 'Terehelt' because it's more than just a game — it's a journey that sparked my interest in coding. My friends and I used to play this game for a long time until it disappeared. I started to make my own version, determined to bring those memories back.",
       techImages: {
-        "Roblox": "https://static.wixstatic.com/media/e71193_8930c4511d88474db383852c4e7e0cf5~mv2.png",
-        "Lua": "https://static.wixstatic.com/media/e71193_ef088d782e654846b566de5b052caafb~mv2.png"
+        "Lua": "/images/Lua-Logo.svg.png"
       },
       featured: true
     },
@@ -165,11 +180,18 @@ export default function Projects() {
       longDescription: "The Chaos Simulator is a Python project designed to explore the fascinating realm of chaos theory, particularly focusing on the Lorenz attractor system. Leveraging Python libraries such as Matplotlib, SciPy, and NumPy, this project dynamically models chaotic systems over time, employing differential equations and calculus to illustrate how subtle changes in initial conditions can profoundly alter system states.",
       technologies: ["Python", "Matplotlib", "SciPy", "NumPy"],
       category: "research",
-      mediaType: "image",
-      mediaUrl: "https://static.wixstatic.com/media/e71193_022a609fa6e7441a86758738bac210a6~mv2.jpg",
+      mediaType: "slideshow",
+      media: [
+        { type: "image" as const, src: "/images/Chaos_1.png", alt: "Chaos Theory Visualization" },
+        { type: "image" as const, src: "/images/Chaos_1_edited.jpg", alt: "Lorenz Attractor Analysis" },
+        { type: "image" as const, src: "/images/Chaos_2.png", alt: "Mathematical Modeling" },
+        { type: "image" as const, src: "/images/Chaos_3.png", alt: "System Dynamics" },
+        { type: "image" as const, src: "/images/Chaos_3_edited.jpg", alt: "Chaos Results" },
+        { type: "image" as const, src: "/images/Chaos_4.png", alt: "Final Visualization" }
+      ],
       rationale: "Originally conceived as part of my high school IB Math internal assessment, the Chaos Simulator seamlessly integrates mathematics with programming to delve into the captivating realm of chaos theory. I ended up getting a perfect score in this Internal Investigation!",
       techImages: {
-        "Python": "https://static.wixstatic.com/media/e71193_78b1554fe86a4b5ca3709394efbb071f~mv2.png"
+        "Python": "/images/python-5-logo-png-transparent.png"
       },
       featured: true
     },
@@ -197,12 +219,20 @@ export default function Projects() {
       longDescription: "Siren is a website I designed for an organization developing a music social media app. Utilizing my skills in HTML, JavaScript, and CSS, I built the site and hosted it on a Node.js server. It features a game inspired by the 'Immaculate Grid,' but centered around music. The game integrates several Spotify APIs, provides daily updating charts, and includes logic for creating game templates.",
       technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Spotify API"],
       category: "websites",
-      mediaType: "video",
-      mediaUrl: "https://video.wixstatic.com/video/e71193_b563dd42d7b24e1cb1457d980dbbb7f9/1080p/mp4/file.mp4",
+      mediaType: "slideshow",
+      media: [
+        { type: "image" as const, src: "/images/Siren 1.png", alt: "Siren Main Interface" },
+        { type: "image" as const, src: "/images/Siren 2.png", alt: "Siren Game Screen" },
+        { type: "image" as const, src: "/images/Siren 3.png", alt: "Siren Features" },
+        { type: "video" as const, src: "/images/70 - SirenV3.mp4", alt: "Siren Demo V3" },
+        { type: "video" as const, src: "/images/72 - SirenV1.mp4", alt: "Siren Demo V1" },
+        { type: "video" as const, src: "/images/73 - SirenV2.mp4", alt: "Siren Demo V2" },
+        { type: "video" as const, src: "/images/74 - SirenV4.mp4", alt: "Siren Demo V4" }
+      ],
       rationale: "After showcasing my website 'Tetradic' to an organization at the University of Florida, I was commissioned to create a website for their upcoming app, Siren. This app aims to be a music-based social media platform.",
       techImages: {
-        "HTML/CSS/JS": "https://static.wixstatic.com/media/e71193_1471559b5a364fafba2be56231a762ec~mv2.png",
-        "Node.js": "https://static.wixstatic.com/media/e71193_b0db8f7b22b5424cbdcbdf31c72b45ad~mv2.png"
+        "HTML/CSS/JS": "/images/logo-html-5-css-javascript-source-code-for-the-taking-23.png",
+        "Node.js": "/images/1200px-Node.js_logo.svg.png"
       },
       featured: true
     },
@@ -373,11 +403,13 @@ export default function Projects() {
               {featuredProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                  className="overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer transform"
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10">
-                    {project.mediaType === "image" && project.mediaUrl ? (
+                    {project.mediaType === "slideshow" && project.media ? (
+                      <Slideshow media={project.media} className="h-full" />
+                    ) : project.mediaType === "image" && project.mediaUrl ? (
                       <div className="h-full flex items-center justify-center">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
@@ -485,7 +517,7 @@ export default function Projects() {
               {otherProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                  className="overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer transform"
                   onClick={() => setSelectedProject(project)}
                 >
                   <CardHeader className="pb-3">
@@ -548,16 +580,18 @@ export default function Projects() {
 
                 <div className="space-y-6">
                   {/* Media */}
-                  {selectedProject.mediaUrl && (
-                    <div className="relative w-full h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg overflow-hidden">
-                      {selectedProject.mediaType === "image" ? (
+                  {(selectedProject.media || selectedProject.mediaUrl) && (
+                    <div className="relative w-full h-96 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg overflow-hidden">
+                      {selectedProject.mediaType === "slideshow" && selectedProject.media ? (
+                        <Slideshow media={selectedProject.media} className="w-full h-full" />
+                      ) : selectedProject.mediaType === "image" && selectedProject.mediaUrl ? (
                         /* eslint-disable-next-line @next/next/no-img-element */
                         <img 
                           src={selectedProject.mediaUrl} 
                           alt={`${selectedProject.title} screenshot`}
                           className="w-full h-full object-contain"
                         />
-                      ) : selectedProject.mediaType === "video" ? (
+                      ) : selectedProject.mediaType === "video" && selectedProject.mediaUrl ? (
                         <video 
                           controls 
                           className="w-full h-full object-contain"
