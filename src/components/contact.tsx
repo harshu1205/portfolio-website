@@ -50,12 +50,12 @@ export default function Contact() {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      href: "https://github.com/sriharshithakula",
+      href: "https://github.com/harshu1205",
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/sriharshith-akula",
+      href: "https://www.linkedin.com/in/sriharshith-akula-7466b627b/",
     },
   ]
 

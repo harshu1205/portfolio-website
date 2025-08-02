@@ -190,7 +190,7 @@ export default function Projects() {
         { type: "image" as const, src: "/images/Chaos_3_edited.jpg", alt: "Chaos Results" },
         { type: "image" as const, src: "/images/Chaos_4.png", alt: "Final Visualization" }
       ],
-      rationale: "Originally conceived as part of my high school IB Math internal assessment, the Chaos Simulator seamlessly integrates mathematics with programming to delve into the captivating realm of chaos theory. I ended up getting a perfect score in this Internal Investigation!",
+      rationale: "Originally conceived as part of my high school IB Math internal assessment, the Chaos Simulator seamlessly integrates mathematics with programming to delve into the captivating realm of chaos theory. While the project was rooted in calculus, my curiosity led me to explore chaos theory and its burgeoning applications in physics. Motivated to intertwine coding with mathematical concepts, I embarked on this journey to unveil the mesmerizing complexity of chaotic systems using the versatile tool of Python. I ended up getting a perfect score in this Internal Investigation!",
       techImages: {
         "Python": "/images/python-5-logo-png-transparent.png"
       },
@@ -205,7 +205,7 @@ export default function Projects() {
       category: "research",
       mediaType: "image",
       mediaUrl: "https://static.wixstatic.com/media/e71193_14f41f1bc6d3417f8ed8c31af39a6407~mv2.png",
-      rationale: "Initially used as an inventive alternative for my high school math internal assessment, the Rummy Probabilities Simulator merges my passion for mathematics with the beloved pastime of playing Rummy with my family.",
+      rationale: "Initially used as an inventive alternative for my high school math internal assessment, the Rummy Probabilities Simulator merges my passion for mathematics with the beloved pastime of playing Rummy with my family. Motivated by a desire to gain a competitive edge in our family games, I embarked on this project to explore the statistical underpinnings of strategic gameplay. By harnessing calculus-based probabilities, this simulator aims to enhance decision-making skills and maximize success in future Rummy encounters with my family.",
       techImages: {
         "Lua": "https://static.wixstatic.com/media/e71193_ef088d782e654846b566de5b052caafb~mv2.png"
       },
@@ -267,7 +267,7 @@ export default function Projects() {
       category: "websites",
       mediaType: "image",
       mediaUrl: "https://static.wixstatic.com/media/e71193_cfa0a3e846ae4f8e92a1134754e03cca~mv2.png",
-      rationale: "Seeing friends struggle to juggle classes, credits, and preferences, I wanted to create something that could ease their burden and turn the chaos of course scheduling into a simple, user-friendly experience.",
+      rationale: "Seeing friends struggle to juggle classes, credits, and preferences, I wanted to create something that could ease their burden. Guided by my own love for planning and organizing, I set out to build a tool that could turn the chaos of course scheduling into a simple, user-friendly experience. By providing a platform where users can effortlessly input their preferences and receive tailored course schedules, this project aims to alleviate the frustrations associated with manual scheduling and offer a reliable alternative to traditional advising services.",
       techImages: {
         "Streamlit": "https://static.wixstatic.com/media/e71193_0fe1bf20c6c5427b9b3285cf47748ff3~mv2.png",
         "Selenium": "https://static.wixstatic.com/media/e71193_ba1c25570afd48e3aedea2c15d47d3d7~mv2.png",
@@ -284,7 +284,7 @@ export default function Projects() {
       category: "websites",
       mediaType: "video",
       mediaUrl: "https://video.wixstatic.com/video/e71193_72e3843a26754d598d1cc55b9f6dfa47/1080p/mp4/file.mp4",
-      rationale: "Recognizing the importance of mental health in academic settings, I created the Mood Planner to provide students with an accessible tool for tracking and managing their emotional well-being throughout their educational journey.",
+      rationale: "This was a project done for a 24-hour hackathon that I participated in. Seeing friends and classmates grappling with last-minute cram sessions and the stress of looming deadlines, I wanted to offer a lifeline. Drawing from my own experience of breaking tasks into bite-sized chunks and spreading them out over time, I set out to create a tool that could help others adopt this approach. The goal? To empower students to take control of their workload, avoid the panic of procrastination, and achieve their best work, one step at a time.",
       featured: true
     },
     {
@@ -308,7 +308,7 @@ export default function Projects() {
       category: "bots",
       mediaType: "image",
       mediaUrl: "https://static.wixstatic.com/media/e71193_86912574c015466f8ed87d73e5a52e10~mv2.png",
-      rationale: "The genesis of Class Collector arises from personal frustrations encountered during class registrations. Despite meticulous monitoring, securing desired class seats remained elusive, plagued by swift fill-ups.",
+      rationale: "The genesis of Class Collector arises from personal frustrations encountered during class registrations. Despite meticulous monitoring, securing desired class seats remained elusive, plagued by swift fill-ups. Recognizing the universality of this challenge, I endeavored to develop a solution that would provide instant notifications upon class availability. However, the oversight regarding two-factor authentication underscores the iterative nature of problem-solving, highlighting the importance of adaptability in software development.",
       techImages: {
         "Selenium": "https://static.wixstatic.com/media/e71193_ba1c25570afd48e3aedea2c15d47d3d7~mv2.png",
         "Python": "https://static.wixstatic.com/media/e71193_78b1554fe86a4b5ca3709394efbb071f~mv2.png"
@@ -324,7 +324,7 @@ export default function Projects() {
       category: "bots",
       mediaType: "image",
       mediaUrl: "https://static.wixstatic.com/media/e71193_43b524e74d614f959432d6d83702fb78~mv2.png",
-      rationale: "Being from an area where reliable internet access was not always a given, I was looking for a way to listen to my music collection without being online. I decided to curate my music collection using Spotify because of its user-friendly interface and extensive playlist organization.",
+      rationale: "Being from an area where reliable internet access was not always a given, I was looking for a way to listen to my music collection without being online. I decided to curate my music collection using Spotify because of its user-friendly interface and extensive playlist organization. But since Apple Music is still a ways off, I set out to automate the process of moving my Spotify playlists to my phone. I developed a solution that not only expedited the music transfer process but also showcased my proclivity for creativity and problem-solving by utilizing Python and web scraping. My music library now syncs with my device with just a click of a button and a straightforward playlist update, guaranteeing uninterrupted musical enjoyment even when I'm not connected to the internet.",
       techImages: {
         "SpotDL": "https://static.wixstatic.com/media/e71193_5bc1a7b8307f4572ac9cc4f2f4cb4a63~mv2.png",
         "Python": "https://static.wixstatic.com/media/e71193_78b1554fe86a4b5ca3709394efbb071f~mv2.png"
@@ -340,6 +340,7 @@ export default function Projects() {
       category: "bots",
       mediaType: "image",
       mediaUrl: "https://static.wixstatic.com/media/e71193_917315835ebe449e9b8959c9e93103b3~mv2.png",
+      rationale: "Driven by the desire to cultivate a vibrant online community, my friends and I embarked on the journey of creating a public Discord server. Recognizing the pivotal role of bots in enhancing user engagement and retention on such platforms, I endeavored to develop a custom bot tailored to our server's needs. Inspired by the myriad functionalities of bots in other Discord communities, I sought to harness my coding skills to enrich our server experience. By infusing the bot with features that incentivize user participation and foster meaningful interactions, we aimed to create a welcoming and dynamic space for individuals to connect and engage.",
       techImages: {
         "JavaScript": "https://static.wixstatic.com/media/e71193_1471559b5a364fafba2be56231a762ec~mv2.png",
         "Heroku": "https://static.wixstatic.com/media/e71193_9f84de95d9044c8bba20a21ae0df62e0~mv2.png"
@@ -354,6 +355,7 @@ export default function Projects() {
       technologies: ["Python", "Data Analysis", "APIs", "Automation"],
       category: "bots",
       mediaType: "image",
+      rationale: "Motivated by the desire to simplify and expedite the arduous task of comparing sports odds, I embarked on the creation of the Sports Betting Organizer. Witnessing my friends invest substantial time and effort into manual odds comparison across various platforms, I recognized an opportunity to leverage automation for their benefit. By developing a tool that swiftly aggregates and analyzes odds from disparate sources, I aimed to empower my friends with a seamless and efficient means of evaluating betting lines, thereby enhancing their overall experience in the realm of sports betting.",
       featured: false
     },
     {
@@ -364,6 +366,7 @@ export default function Projects() {
       technologies: ["Python", "Crypto APIs", "Real-time Monitoring", "Notifications"],
       category: "bots",
       mediaType: "image",
+      rationale: "The genesis of Crypto Notifier stems from the arduous task of constantly monitoring cryptocurrency values, a challenge faced by both myself and my father as we ventured into the market. Recognizing the need for a streamlined solution, I embarked on creating a tool that would alleviate the burden of manual monitoring. By empowering users to set custom thresholds and receive real-time alerts, Crypto Notifier transforms market observation into a seamless and efficient process, enabling informed decision-making with ease.",
       featured: false
     },
     {
@@ -374,6 +377,7 @@ export default function Projects() {
       technologies: ["Python", "Mathematical Computing", "Problem Solving", "Education"],
       category: "bots",
       mediaType: "image",
+      rationale: "Inspired by the need to reclaim valuable study time during my college journey, I conceived the Math Homework Solver to alleviate the burden of repetitive math assignments. Recognizing the redundancy of certain homework tasks that overlapped with my pre-existing knowledge, I sought to automate the process, allowing me to focus on more challenging academic pursuits. While acknowledging ethical considerations, I ensured a comprehensive understanding of skipped concepts, maintaining academic integrity while optimizing efficiency.",
       featured: false
     }
   ]
