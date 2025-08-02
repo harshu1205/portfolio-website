@@ -433,10 +433,10 @@ export default function Projects() {
               {featuredProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-lg hover:scale-[1.01] transition-all duration-300 cursor-pointer transform group relative border-primary/20"
+                  className="project-card overflow-hidden cursor-pointer group relative border-primary/20"
                   onClick={() => setSelectedProject(project)}
                 >
-                  <div className="relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10">
+                  <div className="project-image relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10">
                     {project.mediaType === "slideshow" && project.media ? (
                       <Slideshow media={project.media} className="h-full" />
                     ) : project.mediaType === "image" && project.mediaUrl ? (
@@ -547,7 +547,7 @@ export default function Projects() {
               {otherProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-lg hover:scale-[1.01] transition-all duration-300 cursor-pointer transform group relative border-primary/10 hover:border-primary/30"
+                  className="project-card overflow-hidden cursor-pointer group relative border-primary/10 hover:border-primary/30"
                   onClick={() => setSelectedProject(project)}
                 >
                   <CardHeader className="pb-3">

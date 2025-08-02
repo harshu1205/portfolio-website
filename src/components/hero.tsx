@@ -78,7 +78,8 @@ export default function Hero() {
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/resume.pdf';
-                link.download = 'Harsh_Akula_Resume.pdf';
+                link.download = 'Sriharshith_Akula_Resume.pdf';
+                link.target = '_blank'; // Also allow viewing in browser
                 link.click();
               }}
             >
