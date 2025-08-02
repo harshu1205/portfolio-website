@@ -29,19 +29,19 @@ export default function Contact() {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "hello@sriharshith.dev",
-      href: "mailto:hello@sriharshith.dev",
+      value: "sriharshithakula@gmail.com",
+      href: "mailto:sriharshithakula@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      label: "Phone", 
+      value: "+1 (352) 721-1112",
+      href: "tel:+13527211112",
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Tampa, FL",
       href: "#",
     },
   ]

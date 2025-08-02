@@ -30,19 +30,51 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+          
+          {/* Enhanced headshot with VFX */}
+          <div className="relative w-64 h-64 mx-auto mb-8">
+            {/* Animated rings around photo */}
+            <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-pulse-glow"></div>
+            <div className="absolute inset-2 rounded-full border border-purple-500/20 animate-pulse-glow" style={{animationDelay: '0.5s'}}></div>
+            <div className="absolute inset-4 rounded-full border border-blue-500/20 animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+            
+            <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full overflow-hidden flex items-center justify-center shadow-2xl animate-float">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/photo_5030921246979763740_y.jpg" 
+                alt="Harsh Akula - Professional Headshot"
+                className="w-full h-full object-cover rounded-full"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  if (nextElement) nextElement.style.display = 'flex';
+                }}
+              />
+              <div className="hidden w-full h-full items-center justify-center">
+                <div className="text-6xl font-bold text-primary/30 holographic">H</div>
+              </div>
+            </div>
+            
+            {/* Floating particles around photo */}
+            <div className="absolute -top-4 -left-4 w-3 h-3 bg-blue-400 rounded-full animate-sparkle"></div>
+            <div className="absolute -top-2 -right-6 w-2 h-2 bg-purple-400 rounded-full animate-sparkle" style={{animationDelay: '1s'}}></div>
+            <div className="absolute -bottom-4 -right-4 w-4 h-4 bg-pink-400 rounded-full animate-sparkle" style={{animationDelay: '2s'}}></div>
+            <div className="absolute -bottom-2 -left-6 w-2 h-2 bg-cyan-400 rounded-full animate-sparkle" style={{animationDelay: '1.5s'}}></div>
+          </div>
+          
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             AI Software Engineer specializing in enterprise-scale machine learning systems
             and intelligent automation solutions.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m an AI Software Engineer at Mad Mobile, focused on building enterprise-scale 
+              I&apos;m Harsh, an AI Software Engineer at Mad Mobile based in Tampa, FL, focused on building enterprise-scale 
               machine learning systems that drive business value. My expertise spans predictive 
               analytics, computer vision, and serverless AI architectures.
             </p>
@@ -51,25 +83,6 @@ export default function About() {
               and distributed systems that handle enterprise workloads. My approach combines technical 
               excellence with business impact, delivering solutions that scale.
             </p>
-          </div>
-          
-          <div className="relative">
-            <div className="w-full h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg overflow-hidden flex items-center justify-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
-                src="/images/photo_5030921246979763740_y.jpg" 
-                alt="Sriharshith Akula - Professional Headshot"
-                className="w-full h-full object-cover rounded-lg"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
-                  if (nextElement) nextElement.style.display = 'flex';
-                }}
-              />
-              <div className="hidden w-full h-full items-center justify-center">
-                <div className="text-6xl font-bold text-primary/30">SA</div>
-              </div>
-            </div>
           </div>
         </div>
 

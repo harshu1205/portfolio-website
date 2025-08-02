@@ -101,11 +101,12 @@ export default function Projects() {
       id: 5,
       title: "Taco Man",
       description: "A significant milestone in game design developed using Unity engine with advanced object-oriented programming in C#.",
-      longDescription: "TacoMan represents a significant milestone in my journey of game design, developed using Unity game engine and employing advanced-level techniques. Built on the foundation of object-oriented programming in C#, the game stands as a testament to my prowess in leveraging C# and Unity for intricate game development.",
+      longDescription: "TacoMan represents a significant milestone in my journey of game design, developed using Unity game engine and employing advanced-level techniques. Built on the foundation of object-oriented programming in C#, the game stands as a testament to my prowess in leveraging C# and Unity for intricate game development. Through meticulous organization and implementation, I crafted player classes, enemy AI, level structures, objectives, power-ups, and interactive elements like buttons and switches, showcasing not just technical proficiency but also a keen eye for detail and systematic coding practices. Additionally, my pixel art skills were put to use in designing all visual aspects of the game, complementing the gameplay with vibrant and engaging graphics.",
       technologies: ["Unity", "C#", "Pixel Art", "Game Development"],
       category: "games",
-      mediaType: "image",
-      rationale: "My motivation for creating 'TacoMan' stemmed from a twofold inspiration. Firstly, driven by a personal passion for advancing my skills in game design, I embarked on the journey of exploring the capabilities of professional-grade software like Unity. Secondly, witnessing my sister's enthusiasm for mobile platformer games ignited a desire within me to surprise her with a unique creation of my own.",
+      mediaType: "video",
+      mediaUrl: "/images/51 - taco_V1.mp4",
+      rationale: "My motivation for creating 'TacoMan' stemmed from a twofold inspiration. Firstly, driven by a personal passion for advancing my skills in game design, I embarked on the journey of exploring the capabilities of professional-grade software like Unity. Secondly, witnessing my sister's enthusiasm for mobile platformer games ignited a desire within me to surprise her with a unique creation of my own. With 'TacoMan,' I sought to combine technical expertise with heartfelt creativity, aiming not only to develop a game but also to craft a delightful experience that would resonate with its players. This project served as a platform for expressing my affection through the medium of game development, resulting in a whimsical and entertaining adventure starring the lovable 'Taco Man.'",
       techImages: {
         "Unity": "https://static.wixstatic.com/media/e71193_8d87d6ee8b164a8c94841ddc86277ca2~mv2.png",
         "C#": "https://static.wixstatic.com/media/e71193_a5d95c7b2b304de49b8081afec7a8fab~mv2.png"
@@ -233,6 +234,27 @@ export default function Projects() {
       techImages: {
         "HTML/CSS/JS": "/images/logo-html-5-css-javascript-source-code-for-the-taking-23.png",
         "Node.js": "/images/1200px-Node.js_logo.svg.png"
+      },
+      featured: true
+    },
+    {
+      id: 13.5,
+      title: "Tetradic",
+      description: "A web game featuring color-mixing gameplay inspired by popular daily games like Wordle and The New York Times puzzles.",
+      longDescription: "Tetradic is a web game developed using HTML, CSS, and JavaScript. It features color-mixing gameplay inspired by popular daily games like those found in The New York Times and Wordle. The code includes functions for generating daily puzzles, managing game logic, and storing player data using local storage. It was hosted with a custom domain using Amazon Web Services.",
+      technologies: ["HTML", "CSS", "JavaScript", "AWS", "Game Design"],
+      category: "websites",
+      mediaType: "slideshow",
+      media: [
+        { type: "image" as const, src: "/images/tetr_1.png", alt: "Tetradic Game Interface" },
+        { type: "image" as const, src: "/images/tetr_2.png", alt: "Tetradic Gameplay" },
+        { type: "video" as const, src: "/images/47 - tetr_V1.mp4", alt: "Tetradic Demo V1" },
+        { type: "video" as const, src: "/images/48 - tetr_V2.mp4", alt: "Tetradic Demo V2" }
+      ],
+      rationale: "During a winter break marked by boredom, I conceived the idea for 'Tetradic' as a response to the need for engaging entertainment. During break, I found myself playing daily games such as 'wordle', Inspired by my interest in color theory and puzzle games, I aimed to create a unique experience that combines entertainment with education.",
+      techImages: {
+        "HTML/CSS/JS": "/images/logo-html-5-css-javascript-source-code-for-the-taking-23.png",
+        "AWS": "/images/1024px-Amazon_Web_Services_Logo.svg.png"
       },
       featured: true
     },
@@ -366,9 +388,13 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 px-4 bg-muted/50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-16 relative">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 holographic animate-gradient-x">My Projects</h2>
+          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-yellow-400 rounded-full animate-sparkle"></div>
+          <div className="absolute top-4 right-1/4 w-3 h-3 bg-blue-400 rounded-full animate-sparkle" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-12 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-sparkle" style={{animationDelay: '2s'}}></div>
+          
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto neon-glow">
             Explore my diverse portfolio spanning AI/ML, game development, research, web applications, 
             and automation. Each project showcases different technical skills and creative problem-solving.
           </p>
@@ -403,7 +429,7 @@ export default function Projects() {
               {featuredProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer transform"
+                  className="overflow-hidden hover:shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-500 cursor-pointer transform group relative animate-pulse-glow border-primary/20"
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="relative h-48 bg-gradient-to-br from-primary/10 to-secondary/10">
@@ -517,7 +543,7 @@ export default function Projects() {
               {otherProjects.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="overflow-hidden hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer transform"
+                  className="overflow-hidden hover:shadow-xl hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-500 cursor-pointer transform group relative border-primary/10 hover:border-primary/30"
                   onClick={() => setSelectedProject(project)}
                 >
                   <CardHeader className="pb-3">
