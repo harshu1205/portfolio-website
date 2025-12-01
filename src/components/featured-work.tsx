@@ -43,7 +43,17 @@ type FunProject = {
 function MediaGallery({ media, projectTitle }: { media: MediaItem[], projectTitle: string }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isMuted, setIsMuted] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+
+  useEffect(() => {
+    // Detect mobile device
+    const checkMobile = () => {
+      const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      setIsMobile(mobile)
+    }
+    checkMobile()
+  }, [])
 
   const goToPrevious = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -81,17 +91,18 @@ function MediaGallery({ media, projectTitle }: { media: MediaItem[], projectTitl
   }
 
   useEffect(() => {
-    // Play current video when index changes
+    // Play/pause videos based on current index
     videoRefs.current.forEach((video, index) => {
       if (video) {
-        if (index === currentIndex) {
+        if (index === currentIndex && !isMobile) {
+          // Only autoplay on desktop
           video.play().catch(() => {})
         } else {
           video.pause()
         }
       }
     })
-  }, [currentIndex])
+  }, [currentIndex, isMobile])
 
   if (media.length === 0) return null
 
@@ -120,13 +131,15 @@ function MediaGallery({ media, projectTitle }: { media: MediaItem[], projectTitl
               <video
                 ref={(el) => { videoRefs.current[index] = el }}
                 className="w-full h-full object-cover"
-                autoPlay
+                autoPlay={!isMobile && index === currentIndex}
                 loop
-                muted={isMuted}
+                muted={isMobile ? true : isMuted}
                 playsInline
+                controls={isMobile}
+                preload={index === currentIndex ? "auto" : "metadata"}
                 onLoadedMetadata={() => {
                   const video = videoRefs.current[index]
-                  if (video && index === currentIndex) {
+                  if (video && index === currentIndex && !isMobile) {
                     video.play().catch(() => {})
                   }
                 }}
@@ -138,8 +151,8 @@ function MediaGallery({ media, projectTitle }: { media: MediaItem[], projectTitl
         ))}
       </div>
 
-      {/* Video Controls */}
-      {media[currentIndex]?.type === "video" && (
+      {/* Video Controls - Hidden on Mobile (native controls shown instead) */}
+      {media[currentIndex]?.type === "video" && !isMobile && (
         <div className="absolute top-4 right-4 flex gap-2 z-10">
           <button
             onClick={toggleMute}
