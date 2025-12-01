@@ -14,11 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Harshith Akula - Full-Stack Developer",
-  description: "Full-Stack Developer & Software Engineer specializing in modern web applications. Passionate about clean code, innovative solutions, and bringing ideas to life.",
-  keywords: ["Full-Stack Developer", "Software Engineer", "React", "Next.js", "TypeScript", "Web Development"],
-  authors: [{ name: "Sri Harshith Akula" }],
-  creator: "Sri Harshith Akula",
+  title: "Harsh Akula — AI/ML & Computer Vision Engineer",
+  description: "AI Software Engineer specializing in enterprise machine learning systems, computer vision, and production-scale AI platforms. Building systems that drive measurable business impact.",
+  keywords: ["AI Engineer", "Machine Learning", "Computer Vision", "Enterprise ML", "Deep Learning", "Python", "CV Engineer"],
+  authors: [{ name: "Harsh Akula" }],
+  creator: "Harsh Akula",
+  openGraph: {
+    title: "Harsh Akula — AI/ML & Computer Vision Engineer",
+    description: "Building enterprise AI systems that drive measurable business impact.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -27,13 +32,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
