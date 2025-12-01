@@ -27,7 +27,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in opacity-0 stagger-2">
             I build AI systems that actually work in production.
             <br className="hidden md:block" />
-            <span className="text-foreground/80">Not demos. Real systems that make money and don't break at 3 AM.</span>
+            <span className="text-foreground/80">Not demos. Real systems that make money and don&apos;t break at 3 AM.</span>
           </p>
 
           {/* Scroll indicator */}
@@ -36,7 +36,7 @@ export default function Hero() {
               onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex flex-col items-center gap-2 text-muted-foreground/50 hover:text-muted-foreground transition-colors"
             >
-              <span className="text-xs uppercase tracking-widest">See What I've Built</span>
+              <span className="text-xs uppercase tracking-widest">See What I&apos;ve Built</span>
               <ArrowDown className="h-4 w-4 animate-bounce" />
             </button>
           </div>

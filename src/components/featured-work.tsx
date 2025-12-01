@@ -70,12 +70,12 @@ function MediaGallery({ media, projectTitle }: { media: MediaItem[], projectTitl
     if (video) {
       if (video.requestFullscreen) {
         video.requestFullscreen()
-      } else if ((video as any).webkitRequestFullscreen) {
-        (video as any).webkitRequestFullscreen()
-      } else if ((video as any).mozRequestFullScreen) {
-        (video as any).mozRequestFullScreen()
-      } else if ((video as any).msRequestFullscreen) {
-        (video as any).msRequestFullscreen()
+      } else if ('webkitRequestFullscreen' in video) {
+        (video as HTMLVideoElement & { webkitRequestFullscreen: () => Promise<void> }).webkitRequestFullscreen()
+      } else if ('mozRequestFullScreen' in video) {
+        (video as HTMLVideoElement & { mozRequestFullScreen: () => Promise<void> }).mozRequestFullScreen()
+      } else if ('msRequestFullscreen' in video) {
+        (video as HTMLVideoElement & { msRequestFullscreen: () => Promise<void> }).msRequestFullscreen()
       }
     }
   }
@@ -618,13 +618,13 @@ export default function FeaturedWork() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in">
           <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mb-4">
-            What I've Built
+            What I&apos;ve Built
           </p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Projects That Actually Matter
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl">
-            Here's the stuff I'm actually proud of. The ones where I learned something, 
+            Here&apos;s the stuff I&apos;m actually proud of. The ones where I learned something, 
             broke something, and then fixed it properly.
           </p>
         </div>

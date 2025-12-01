@@ -41,7 +41,7 @@ export default function Contact() {
             Always open to interesting projects, new opportunities, or just chatting about AI/ML, 
             computer vision, or the latest thing that broke in production. 
             <br className="hidden md:block" />
-            <span className="text-foreground/80">Remote work preferred, but I'll travel for the right team.</span>
+            <span className="text-foreground/80">Remote work preferred, but I&apos;ll travel for the right team.</span>
           </p>
 
           {/* Contact Links */}
@@ -72,7 +72,7 @@ export default function Contact() {
           <div className="mt-12 pt-8 border-t border-border/50">
             <p className="text-sm text-muted-foreground">
               Based in <span className="text-foreground">Tampa, Florida</span> — 
-              but honestly, I'm usually just wherever my laptop is.
+              but honestly, I&apos;m usually just wherever my laptop is.
             </p>
           </div>
         </div>
